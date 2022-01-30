@@ -24,8 +24,15 @@
     </ul>
 </nav>
 <ul class="nav main-contacts flex">
-    <li><a class="nav-link" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
-    <li><a class="nav-link" href="tel:+380961111111">+38 096 111 11 11</a></li>
+    <li><a class="nav-link" href="mailto:info@devstudio.com">
+            <svg class="email-icon">
+                <use href="img/sprite.svg#icon-email"></use>
+            </svg>
+    info@devstudio.com</a></li>
+    <li><a class="nav-link" href="tel:+380961111111"><svg class="phone-icon">
+        <use href="img/sprite.svg#icon-phone"></use>
+    </svg>
+    +38 096 111 11 11</a></li>
 </ul>
     </div>
     </header>
@@ -140,7 +147,8 @@
     </main>
 
     <footer class="footer">
-        <div class="container">
+        <div class="container flex">
+            <div class="footer-adress">
         <a class="logo-footer" href="#"><span class="first-logo-part">Web</span>Studio</a>
         <address class="footer-contacts">
             <p>г. Киев, пр-т Леси Украинки, 26</p>
@@ -149,6 +157,25 @@
                 <li><a href="tel:+380961111111">+38 096 111 11 11</a></li>
             </ul>
         </address>
+    </div>
+        <div class="social">
+            <p>присоединяйтесь</p>
+            <ul class="social-links">
+                <li class="social-link"><a clsass="social-link" href="#">
+                    <svg class="social-icon"><use href="./img/sprite.svg#icon-instagram"></use></svg></a>
+                </li>
+                <li class="social-link"><a clsass="social-link" href="#">
+                    <svg class="social-icon"><use href="./img/sprite.svg#icon-twitter"></use></svg></a>
+                </li>
+                <li class="social-link"><a clsass="social-link" href="#">
+                    <svg class="social-icon"><use href="./img/sprite.svg#icon-facebook"></use></svg></a>
+                </li>
+                <li class="social-link"><a clsass="social-link" href="#">
+                    <svg class="social-icon"><use href="./img/sprite.svg#icon-linkedin"></use></svg></a>
+                </li>
+            </ul>
+        </div>
+
     </div>
     </footer>
 

@@ -31,6 +31,7 @@ a{
 .flex{
     display: flex;
     padding: 0;
+    align-items: center;
     }
 
 body{
@@ -62,8 +63,6 @@ body{
     font-weight: 700;
     font-size: 26px;
     color: var(--main-text-color);
-    margin-top: auto;
-    margin-bottom: auto;
 }
 
 
@@ -87,17 +86,32 @@ body{
  }
 
  .nav-link{
-    color: var(--main-text-color);  
-    display: block;
+    color: var(--main-text-color); 
+    display: inline-flex;
+    align-items: center;
     padding-top: 32px;
     padding-bottom: 32px;
+    fill: var(--p-color); 
  }
 
 
 .nav a:hover, 
 .nav a:focus,
 .nav a:active{
-    color: var(--main-link-color-active);  
+    color: var(--main-link-color-active);
+    fill: var(--main-link-color-active); 
+ }
+
+ .email-icon{
+     height: 12px;
+     width: 16px;
+     margin-right: 10px;
+ }
+
+ .phone-icon{
+    height: 16px;
+    width: 10px;
+    margin-right: 10px;
  }
 
  .nav a.is-active{
@@ -110,9 +124,20 @@ body{
 
 .main-banner{
      background-color: var(--background-main);
+     
+ }
+
+ .overlay{
+     height: 600px;
+     max-width: 1600px;
      padding-top: 200px;
      padding-bottom: 200px;
-     
+     margin-left: auto;
+     margin-right: auto;
+     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("/img/main-bunner.jpg");
+     background-repeat: no-repeat;
+     background-position: center;
+     background-size: cover;
  }
 
 h1{
@@ -173,6 +198,28 @@ h1{
     padding-bottom: 94px;
 }
 
+.benefits-icons{
+    display: flex;
+    align-items: center;
+    height: 120px;
+    background: var(--background-stuff);
+    border-radius: 4px;
+    margin-bottom: 30px;
+}
+
+.benefits-icon{
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    margin: auto;
+}
+
+
+
+.benefits-items{
+    width: 270px;
+    }
+
 .benefits-list{
     margin: 0;
 }
@@ -192,15 +239,11 @@ h1{
     color: var(--p-color);
 }
 
-.benefits-items{
-width: 270px;
-}
-
 .benefits-items:not(:last-child){
 margin-right: 30px;
 }
 
-.what-we-do h2, .staff h2{
+.what-we-do h2, .staff h2, .partners h2{
     font-weight: bold;
     font-size: 36px;
     line-height: 42px;
@@ -266,6 +309,82 @@ margin-right: 30px;
 .staff-description{
     padding: 30px 10px;
 }
+
+.staff-description p{
+    margin-bottom: 16px;
+}
+
+.staff-social-links{
+    display: flex;
+    padding: 0;
+    justify-content: center;
+}
+
+.staff-social-icon{
+    height: 20px;
+    width: 20px;
+}
+
+.staff-social-link{
+    display: inline-block;
+    width: 44px;
+    height: 44px;
+    background: transparent;
+    border-radius: 50%;
+    padding: 12px;
+    color: var(--p-color)
+}
+
+.staff-social-link a{
+    color: inherit;
+}
+
+
+.staff-social-link:hover, .social-link:focus{
+    background-color: var(--button-hover-color);
+    color: var(--white);
+}
+
+.staff-social-link:not(:last-child){
+    margin-right: 10px;
+}
+
+.partners{
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.partners ul{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.partners-items:not(:last-child){
+    margin-right: 30px;
+}
+
+.partners-button{
+    display: block;
+    width: 170px;
+    height: 92px;
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
+    background-color: transparent;
+    padding: 0;
+    color: #AFB1B8;
+    padding: 16px 32px;
+}
+
+.partners-icon{
+    width: 106px;
+    height: 60px;
+}
+
+.partners-button:hover{
+    border-color: var(--button-hover-color);
+    color: var(--button-hover-color);
+}
+
 
 .our-projects{
     padding-top: 94px;
@@ -349,15 +468,63 @@ margin-right: 30px;
      background-color: var(--background-footer);
  }
 
+ .footer-adress{
+     margin-right: 70px;
+ }
+
  .logo-footer{
     color: var(--white);
     margin-bottom: 20px;
 }
 
-.footer-contacts p{
+.footer-contacts p, .social p{
     font-style: normal;
     color: var(--white);
     margin: 0 0 9px 0;
+}
+
+.social-links{
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.social-link{
+    display: inline-block;
+    width: 44px;
+    height: 44px;
+    background:#44454e;
+    border-radius: 50%;
+    padding: 12px;
+}
+
+.social-link a{
+    color: var(--white);
+}
+
+
+.social-link:hover, .social-link:focus{
+    background-color: var(--button-hover-color);
+}
+
+.social-link:not(:last-child){
+    margin-right: 10px;
+}
+
+.social p{
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.social{
+    padding-top: 12px;
+    margin-bottom: auto;
+}
+
+.social-icon{
+    height: 20px;
+    width: 20px;
 }
 
 .nav-footer a{
@@ -369,6 +536,9 @@ margin-right: 30px;
     margin: 0;
 }
 
+address{
+    font-style: normal;
+}
 .nav-footer li:not(:last-child){
     margin-bottom: 9px;
 }
